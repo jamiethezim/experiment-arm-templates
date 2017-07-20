@@ -44,7 +44,7 @@
         "username": {
             "value": "jamie"
         },
-        "scaleOutInterval": { 
+        "scaleOutInterval": {
             "value": "1"
         },
         "instanceCount": {
@@ -66,16 +66,7 @@
             "value": "65"
         },
         "vmssName": {
-            "value": "jzimmerman-ss"
-        },
-        "vnetName": {
-            "value": "jzimmerman-vNet"
-        },
-        "subnetName": {
-              "value": "10.83.0.0/21"
-          },
-        "subnetAddressSpaceName": {
-              "value": "10.83.0.0/16"
+            "value": "jzimmerman-test-ss"
         }
     }
 }
