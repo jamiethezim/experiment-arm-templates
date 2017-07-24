@@ -25,8 +25,8 @@
     },
     "resources": [ ],
     "outputs": {
-        "defaultSubnetRef": {
-            "value": "[concat(variables('vnetID'), '/subnets/', parameters('subnetName'))]",
+        "subnetId": {
+            "value": "[reference(parameters('newVnetName'), '2016-12-01').subnets[0].id]",
             "type": "string"
         }
     }
