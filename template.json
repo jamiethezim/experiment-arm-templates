@@ -12,6 +12,7 @@
         },
         "baseTemplateUri": "[concat(parameters('baseUrl'), '/')]",
         "baseTemplateUriDwhanger": "[concat(parameters('baseUrlDwhanger'), '/')]",
+        "baseTemplateUriJZimmerman": "[concat(parameters('baseUrlJZimmerman'), '/')]",
         "diskType": "[variables(concat('diskTypeIfSinglePlacementGroup', parameters('singlePlacementGroup')))]",
         "saLogic": "[variables(concat('saLogic', variables('diskType')))]",
         "diskTypeIfSinglePlacementGroupfalse": "Managed",
@@ -54,7 +55,7 @@
             "templateUri": "[concat(variables('baseTemplateUri'), 'sa.json')]"
         },
         
-        "virtualNetworkSetupURL": "[concat(variables('baseTemplateUriDwhanger'),'/vnet-',parameters('vnetNewOrExisting'),'.json')]",
+        "virtualNetworkSetupURL": "[concat(variables('baseTemplateUriJZimmerman'),'/vnet-',parameters('vnetNewOrExisting'),'.json')]",
         "_comment1": "if singlePlacementGroup is true (aka 'small scale set'), then customers can choose managed or unmanaged; if false (aka 'large scale set'), only managed is allowed",
         "_comment0": "concat 'lbLogic' with parameters('singlePlacementGroup') to get back the name of a variable containing the template url and parameter set for either deploying the lb or not"
     },
@@ -117,6 +118,13 @@
             }
         },
         "baseUrlDwhanger": {
+            "defaultValue": "https://raw.githubusercontent.com/dwhanger/azure-arm-templates/master/templates",
+            "type": "string",
+            "metadata": {
+                "artifactsBaseUrl": "Base URL of the modified VMSS Template with custom image enablement"
+            }
+        },
+        "baseUrlJZimmerman": {
             "defaultValue": "https://raw.githubusercontent.com/jamiethezim/experiment-arm-templates/master",
             "type": "string",
             "metadata": {
@@ -184,7 +192,7 @@
         },
         "vnetName": {
             "maxLength": 61,
-            "defaultValue": "jamie-brand-new-vnet",
+            "defaultValue": "jzimmerman-vnet",
             "type": "string",
             "metadata": {
                 "description": "vnet name for the subscription"
@@ -198,14 +206,14 @@
             }
         },
         "subnetAddressSpace": {
-            "defaultValue": "10.82.140.0/22",
+            "defaultValue": "10.82.0.0/25",
             "type": "string",
             "metadata": {
                 "description": "subnet in cidr format eg: 10.82.140.0/22"
             }
         },
         "vnetAddressSpace": {
-            "defaultValue": "10.82.140.0/21",
+            "defaultValue": "10.82.0.0/23",
             "type": "string",
             "metadata": {
                 "description": "vnet address space in cidr format eg: 10.0.0.0/16"
@@ -256,7 +264,7 @@
                         "value": "[parameters('subnetName')]"
                     },
                     "subnetAddressSpaceName": {
-                        "value": "[parameters('subnetAddressSpaceName')]"
+                        "value": "[parameters('subnetAddressSpace')]"
                     }
                 }
             }
