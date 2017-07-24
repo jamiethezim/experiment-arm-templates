@@ -2,16 +2,17 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "virtualNetworkName": {
+        "vnetName": {
             "type": "string"
         },
-        "virtualNetworkAddressPrefix": {
+        "vnetAddressSpace": {
+            "type": "string",
+            "comment": "this is unused but will leave in as remnants of starter file"
+        },
+        "subnetName": {
             "type": "string"
         },
-        "defaultSubnetName": {
-            "type": "string"
-        },
-        "dbSubnetAddressPrefix": {
+        "subnetAddressSpace": {
             "type": "string"
         },
         "virtualNetworkExistingRGName": {
@@ -20,12 +21,12 @@
         }
     },
     "variables": {
-        "vnetID": "[resourceId(parameters('virtualNetworkExistingRGName'),concat('Microsoft.Network','/','virtualNetworks'),parameters('virtualNetworkName'))]"
+        "vnetID": "[resourceId(parameters('virtualNetworkExistingRGName'),concat('Microsoft.Network','/','virtualNetworks'),parameters('vnetName'))]"
     },
     "resources": [ ],
     "outputs": {
-        "dbSubnetRef": {
-            "value": "[concat(variables('vnetID'), '/subnets/', parameters('dbSubnetName'))]",
+        "defaultSubnetRef": {
+            "value": "[concat(variables('vnetID'), '/subnets/', parameters('subnetName'))]",
             "type": "string"
         }
     }

@@ -2,13 +2,16 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "newVnetName": {
+        "vnetName": {
             "type": "string"
         },
-        "newVnetAddressSpace": {
+        "subnetName": {
             "type": "string"
         },
-        "newSubnetName": {
+        "vnetAddressSpace": {
+            "type": "string"
+        },
+        "subnetAddressSpace": {
             "type": "string"
         },
         "virtualNetworkExistingRGName": {
@@ -18,8 +21,8 @@
     },
     "variables": {
         "resourceAPIVersion": "2015-06-15",
-        "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
-        "defaultSubnet": "[concat(variables('vnetID'),'/subnets/',parameters('newSubnetName'))]"
+        "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
+        "defaultSubnet": "[concat(variables('vnetID'),'/subnets/',parameters('subnetName'))]"
     },
     "resources": [
       {
@@ -30,14 +33,14 @@
         "properties": {
           "addressSpace": {
             "addressPrefixes": [
-              "[parameters('newVnetAddressSpace')]"
+              "[parameters('vnetAddressSpace')]"
             ]
           },
           "subnets": [
             {
               "name": "default",
               "properties": {
-                "addressPrefix": "[parameters('newSubnetName')]"
+                "addressPrefix": "[parameters('subnetAddressSpace')]"
               }
             }
           ]
@@ -46,7 +49,7 @@
     ],
     "outputs": {
         "subnetId": {
-            "value": "[variables('defaultSubnet')]",
+            "value": "[reference(parameters('newVnetName'), '2016-12-01').subnets[0].id]",
             "type": "string"
         }
     }
