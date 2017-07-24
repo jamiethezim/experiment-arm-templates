@@ -7,7 +7,6 @@
         },
         "vnetAddressSpace": {
             "type": "string",
-            "comment": "this is unused but will leave in as remnants of starter file"
         },
         "subnetName": {
             "type": "string"
@@ -26,7 +25,7 @@
     "resources": [ ],
     "outputs": {
         "subnetId": {
-            "value": "[reference(parameters('newVnetName'), '2016-12-01').subnets[0].id]",
+            "value": "[reference(parameters('vnetName'), '2016-12-01').subnets[0].id]",
             "type": "string"
         }
     }

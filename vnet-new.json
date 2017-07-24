@@ -49,7 +49,7 @@
     ],
     "outputs": {
         "subnetId": {
-            "value": "[reference(parameters('newVnetName'), '2016-12-01').subnets[0].id]",
+            "value": "[reference(parameters('vnetName'), '2016-12-01').subnets[0].id]",
             "type": "string"
         }
     }
