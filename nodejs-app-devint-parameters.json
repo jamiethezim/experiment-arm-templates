@@ -42,7 +42,7 @@
             "value": "eastus"
         },
         "username": {
-            "value": "dwhanger"
+            "value": "jamie"
         },
         "scaleOutInterval": {
             "value": "1"
@@ -72,10 +72,10 @@
             "value": "jamie-brand-new-vnet"
         },
         "newSubnetName": {
-              "value": "10.82.1.0/22"
+              "value": "10.82.140.0/22"
         },
         "newVnetAddressSpace": {
-              "value": "10.82.0.0/21"
+              "value": "10.82.140.0/21"
         },
         "existingVnetName": {
             "value": "jzimmerman-vnet"

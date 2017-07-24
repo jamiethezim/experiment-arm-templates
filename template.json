@@ -185,7 +185,7 @@
         },
         "newVnetName": {
             "maxLength": 61,
-            "defaultValue": "muse1-nd01-n001-vn01",
+            "defaultValue": "jamie-brand-new-vnet",
             "type": "string",
             "metadata": {
                 "description": "vnet name for the subscription"
@@ -199,7 +199,7 @@
             }
         },
         "newVnetAddressSpace": {
-            "defaultValue": "10.0.0.0/16",
+            "defaultValue": "10.82.140.0/21",
             "type": "string",
             "metadata": {
                 "description": "subnet address space in cidr format eg: 10.0.0.0/16"
@@ -207,14 +207,14 @@
         },
         "existingVnetName": {
             "type": "string",
-            "defaultValue": "mysqlvnet",
+            "defaultValue": "jzimmerman-vnet",
             "metadata": {
                 "description": "Virtual network name for the cluster"
             }
         },
         "vnetNewOrExisting": {
             "type": "string",
-            "defaultValue": "new",
+            "defaultValue": "existing",
             "allowedValues": [
                 "new",
                 "existing"
