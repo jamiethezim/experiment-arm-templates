@@ -117,7 +117,6 @@
             }
         },
         "baseUrlDwhanger": {
-            "defaultValue0": "https://raw.githubusercontent.com/dwhanger/azure-arm-templates/master/templates",
             "defaultValue": "https://raw.githubusercontent.com/jamiethezim/experiment-arm-templates/master",
             "type": "string",
             "metadata": {
@@ -183,7 +182,7 @@
                 "description": "String used as a base for naming resources. Must be 3-61 characters in length."
             }
         },
-        "newVnetName": {
+        "vnetName": {
             "maxLength": 61,
             "defaultValue": "jamie-brand-new-vnet",
             "type": "string",
@@ -191,25 +190,25 @@
                 "description": "vnet name for the subscription"
             }
         },
-        "newSubnetName": {
+        "subnetName": {
+            "defaultValue": "default",
+            "type": "string",
+            "metadata": {
+                "description": "subnet name"
+            }
+        },
+        "subnetAddressSpace": {
             "defaultValue": "10.82.140.0/22",
             "type": "string",
             "metadata": {
                 "description": "subnet in cidr format eg: 10.82.140.0/22"
             }
         },
-        "newVnetAddressSpace": {
+        "vnetAddressSpace": {
             "defaultValue": "10.82.140.0/21",
             "type": "string",
             "metadata": {
-                "description": "subnet address space in cidr format eg: 10.0.0.0/16"
-            }
-        },
-        "existingVnetName": {
-            "type": "string",
-            "defaultValue": "jzimmerman-vnet",
-            "metadata": {
-                "description": "Virtual network name for the cluster"
+                "description": "vnet address space in cidr format eg: 10.0.0.0/16"
             }
         },
         "vnetNewOrExisting": {
@@ -243,7 +242,7 @@
             "properties": {
                 "templateLink": {
                     "contentVersion": "1.0.0.0",
-                    "uri": "[concat(variables('baseTemplateUriDwhanger'), 'vnet.json')]"
+                    "uri": "[variables('virtualNetworkSetupURL')]"
                 },
                 "mode": "Incremental",
                 "parameters": {

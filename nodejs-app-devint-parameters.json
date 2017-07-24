@@ -68,17 +68,17 @@
         "vmssName": {
             "value": "jzimmerman-ss"
         },
-        "newVnetName": {
+        "vnetName": {
             "value": "jamie-brand-new-vnet"
         },
-        "newSubnetName": {
+        "subnetName": {
+            "value": "default"
+        },
+        "subnetAddressSpace": {
               "value": "10.82.140.0/22"
         },
-        "newVnetAddressSpace": {
+        "vnetAddressSpace": {
               "value": "10.82.140.0/21"
-        },
-        "existingVnetName": {
-            "value": "jzimmerman-vnet"
         },
         "vnetNewOrExisting": {
             "value": "existing"
