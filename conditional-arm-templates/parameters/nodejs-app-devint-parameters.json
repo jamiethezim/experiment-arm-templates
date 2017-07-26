@@ -42,7 +42,7 @@
             "value": "eastus"
         },
         "username": {
-            "value": "jamie"
+            "value": "darren"
         },
         "scaleOutInterval": {
             "value": "1"
@@ -60,7 +60,7 @@
             "value": "jzimmerman-pip"
         },
         "password": {
-            "value": "scarySpook123"
+            "value": "Password1234"
         },
         "scaleOutCPUPercentageThreshold": {
             "value": "65"
