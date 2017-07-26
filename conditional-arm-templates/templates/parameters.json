@@ -1,0 +1,72 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "autoscaleDefault": {
+            "value": "2"
+        },
+        "scaleInCPUPercentageThreshold": {
+            "value": "35"
+        },
+        "authenticationType": {
+            "value": "password"
+        },
+        "image": {
+            "value": "xxxxxx"
+        },
+        "sourceImageVhdUri": {
+            "value": "xxxxxxx"
+        },
+        "vmSku": {
+            "value": "Standard_A1"
+        },
+        "osType": {
+            "value": "Linux"
+        },
+        "scaleInInterval": {
+            "value": "1"
+        },
+        "diskTypeIfSmall": {
+            "value": "Managed"
+        },
+        "pipName": {
+            "value": "ip01"
+        },
+        "singlePlacementGroup": {
+            "value": "true"
+        },
+        "autoscaleYesOrNo": {
+            "value": "Yes"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "username": {
+            "value": "xxxxxx"
+        },
+        "scaleOutInterval": {
+            "value": "1"
+        },
+        "instanceCount": {
+            "value": "4"
+        },
+        "autoscaleMin": {
+            "value": "2"
+        },
+        "autoscaleMax": {
+            "value": "15"
+        },
+        "pipLabel": {
+            "value": "xxxxxxxxxxx"
+        },
+        "password": {
+            "value": "xxxxxxxx"
+        },
+        "scaleOutCPUPercentageThreshold": {
+            "value": "65"
+        },
+        "vmssName": {
+            "value": "xxxxxxxxxx"
+        }
+    }
+}

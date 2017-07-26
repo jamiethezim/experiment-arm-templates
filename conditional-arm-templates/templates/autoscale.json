@@ -1,0 +1,87 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "autoscaleYesOrNo": {
+      "type": "string"
+    },
+    "autoscaleMin": {
+      "type": "string"
+    },
+    "autoscaleMax": {
+      "type": "string"
+    },
+    "autoscaleDefault": {
+      "type": "string"
+    },
+    "scaleOutCPUPercentageThreshold": {
+      "type": "string"
+    },
+    "scaleOutInterval": {
+      "type": "string"
+    },
+    "scaleInCPUPercentageThreshold": {
+      "type": "string"
+    },
+    "scaleInInterval": {
+      "type": "string"
+    },
+    "vmssId": {
+      "type": "string"
+    },
+    "baseTemplateUri": {
+      "type": "string"
+    }
+  },
+  "variables": {
+    "autoscaleLogicIfYes": {
+      "templateUri": "[concat(parameters('baseTemplateUri'), 'autoscaleHelper.json')]",
+      "parameters": {
+        "autoscaleMin": {
+          "value": "[parameters('autoscaleMin')]"
+        },
+        "autoscaleMax": {
+          "value": "[parameters('autoscaleMax')]"
+        },
+        "autoscaleDefault": {
+          "value": "[parameters('autoscaleDefault')]"
+        },
+        "scaleOutCPUPercentageThreshold": {
+          "value": "[parameters('scaleOutCPUPercentageThreshold')]"
+        },
+        "scaleOutInterval": {
+          "value": "[parameters('scaleOutInterval')]"
+        },
+        "scaleInCPUPercentageThreshold": {
+          "value": "[parameters('scaleInCPUPercentageThreshold')]"
+        },
+        "scaleInInterval": {
+          "value": "[parameters('scaleInInterval')]"
+        },
+        "vmssId": {
+          "value": "[parameters('vmssId')]"
+        }
+      }
+    },
+    "autoscaleLogicIfNo": {
+      "templateUri": "[concat(parameters('baseTemplateUri'), 'null.json')]",
+      "parameters": {}
+    },
+    "autoscaleLogic": "[variables(concat('autoscaleLogicIf', parameters('autoscaleYesOrNo')))]"
+  },
+  "resources": [
+    {
+      "name": "saDep",
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2015-11-01",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "[variables('autoscaleLogic').templateUri]",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": "[variables('autoscaleLogic').parameters]"
+      }
+    }
+  ]
+}
