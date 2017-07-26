@@ -23,7 +23,7 @@
   },
   "variables": {
     "vnetId": "[resourceId(parameters('vnetRGname'), 'Microsoft.Network/virtualNetworks', parameters('vnetName'))]",
-    "subnetId": "[concat(variables('vnetId'), '/subnets/', 'default')]"
+    "subnetId": "[concat(variables('vnetId'), '/subnets/', 'GatewaySubnet')]"
   },
   "resources": [
     {
