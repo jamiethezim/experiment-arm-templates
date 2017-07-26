@@ -15,9 +15,11 @@
       "type": "string"
     }
   },
-  "variables": {},
+  "variables": {
+  },
   "resources": [
     {
+      "condition": "[equals(parameters('vnetNewOrExisting'),'new')]",
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[parameters('vnetName')]",
       "location": "[parameters('location')]",
@@ -42,7 +44,7 @@
   "outputs": {
     "subnetId": {
       "type": "string",
-      "value": "[reference(parameters('vnetName'), '2016-12-01').subnets[0].id]"
+      "value": "[resourceId(parameters('vnetRGname'),'Microsoft.Network/virtualNetworks/subnets', parameters('vnetName'), parameters('subnetName'))]"
     }
   }
 }

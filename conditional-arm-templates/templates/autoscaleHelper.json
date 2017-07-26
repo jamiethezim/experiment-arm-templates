@@ -48,7 +48,7 @@
       "type": "Microsoft.Insights/autoscaleSettings",
       "apiVersion": "2015-04-01",
       "name": "cpuautoscale",
-      "location": "westus",
+      "location": "eastus",
       "properties": {
         "name": "cpuautoscale",
         "targetResourceUri": "[parameters('vmssId')]",

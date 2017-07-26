@@ -180,23 +180,41 @@
                 "description": "String used as a base for naming resources. Must be 3-61 characters in length."
             }
         },
+        "vnetNewOrExisting": {
+            "type": "string",
+            "defaultValue": "existing",
+            "allowedValues": [
+                "new",
+                "existing"
+            ],
+            "metadata": {
+                "description": "Determines use of pre-existing vnet infra or creation of a brand new one"
+            }
+        },
+        "vnetRGname": {
+            "type": "string",
+            "defaultValue": "jzimmerman-bridge-net",
+            "metadata": {
+                "description": "If using existing vnet, it's in a different RG, so need a reference to it. If new vnet, it won't break to specify RG"
+            }
+        },
         "vnetName": {
             "maxLength": 61,
-            "defaultValue": "muse1-nd01-n001-vn01",
+            "defaultValue": "jzimmerman-vnet",
             "type": "string",
             "metadata": {
                 "description": "vnet name for the subscription"
             }
         },
         "subnetName": {
-            "defaultValue": "10.82.140.0/22",
+            "defaultValue": "10.82.0.0/25",
             "type": "string",
             "metadata": {
                 "description": "subnet in cidr format eg: 10.82.140.0/22"
             }
         },
         "subnetAddressSpaceName": {
-            "defaultValue": "10.0.0.0/16",
+            "defaultValue": "10.82.0.0/23",
             "type": "string",
             "metadata": {
                 "description": "subnet address space in cidr format eg: 10.0.0.0/16"
@@ -293,7 +311,7 @@
                         "value": "[reference('saDep').outputs.osDisk.value]"
                     },
                     "subnetId": {
-                        "value": "[reference('vnetDep').outputs.subnetId.value]"
+                        "value": "[concat(reference('vnetDep').outputs.subnetId.value)]"
                     },
                     "singlePlacementGroup": {
                         "value": "[parameters('singlePlacementGroup')]"
