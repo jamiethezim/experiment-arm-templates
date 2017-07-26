@@ -13,6 +13,12 @@
     },
     "subnetAddressSpaceName": {
       "type": "string"
+    },
+    "vnetNewOrExisting": {
+      "type": "string"
+    },
+    "vnetRGname": {
+      "type": "string"
     }
   },
   "variables": {

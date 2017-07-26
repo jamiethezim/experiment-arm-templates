@@ -248,6 +248,12 @@
                     },
                     "subnetAddressSpaceName": {
                         "value": "[parameters('subnetAddressSpaceName')]"
+                    },
+                    "vnetNewOrExisting": {
+                        "value": "[parameters('vnetNewOrExisting')]"
+                    },
+                    "vnetRGname": {
+                        "value": "[parameters('vnetRGname')]"
                     }
                 }
             }
