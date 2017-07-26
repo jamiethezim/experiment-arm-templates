@@ -115,7 +115,7 @@
             }
         },
         "baseUrlDwhanger": {
-            "defaultValue": "https://raw.githubusercontent.com/dwhanger/azure-arm-templates/master/templates",
+            "defaultValue": "https://raw.githubusercontent.com/jamiethezim/experiment-arm-templates/master/conditional-arm-templates/templates",
             "type": "string",
             "metadata": {
                 "artifactsBaseUrl": "Base URL of the modified VMSS Template with custom image enablement"
