@@ -6,7 +6,7 @@
             "type": "string"
         },
         "vnetAddressSpace": {
-            "type": "string",
+            "type": "string"
         },
         "subnetName": {
             "type": "string"
