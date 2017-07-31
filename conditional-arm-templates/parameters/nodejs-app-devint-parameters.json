@@ -29,9 +29,6 @@
         "diskTypeIfSmall": {
             "value": "Managed"
         },
-        "pipName": {
-            "value": "ip01"
-        },
         "singlePlacementGroup": {
             "value": "true"
         },
@@ -55,9 +52,6 @@
         },
         "autoscaleMax": {
             "value": "15"
-        },
-        "pipLabel": {
-            "value": "jamie-pip"
         },
         "password": {
             "value": "scarySpook123"
