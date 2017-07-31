@@ -1,0 +1,84 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "autoscaleDefault": {
+            "value": "2"
+        },
+        "scaleInCPUPercentageThreshold": {
+            "value": "35"
+        },
+        "authenticationType": {
+            "value": "password"
+        },
+        "image": {
+            "value": "Ubuntu16.04-LTS"
+        },
+	    "sourceImageVhdUri": {
+            "value": "https://dwhangernslinux.blob.core.windows.net/vhds/xenial-server-cloudimg-amd64-disk1_2.vhd"
+    	},
+        "vmSku": {
+            "value": "Standard_A1"
+        },
+        "osType": {
+            "value": "Linux"
+        },
+        "scaleInInterval": {
+            "value": "1"
+        },
+        "diskTypeIfSmall": {
+            "value": "Managed"
+        },
+        "singlePlacementGroup": {
+            "value": "true"
+        },
+        "autoscaleYesOrNo": {
+            "value": "Yes"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "username": {
+            "value": "jamie"
+        },
+        "scaleOutInterval": {
+            "value": "1"
+        },
+        "instanceCount": {
+            "value": "4"
+        },
+        "autoscaleMin": {
+            "value": "2"
+        },
+        "autoscaleMax": {
+            "value": "15"
+        },
+        "password": {
+            "value": "scarySpook123"
+        },
+        "scaleOutCPUPercentageThreshold": {
+            "value": "65"
+        },
+        "vmssName": {
+            "value": "jzimmerman-vmss"
+        },
+        "vnetNewOrExisting": {
+            "value": "existing"
+        },
+        "vnetRGname": {
+            "value": "jzimmerman-bridge-net"
+        },
+        "vnetName": {
+            "value": "jzimmerman-vnet"
+        },
+        "subnetName": {
+              "value": "10.82.0.0/25"
+        },
+        "subnetTitle": {
+            "value": "default"
+        },
+        "subnetAddressSpaceName": {
+              "value": "10.82.0.0/23"
+        }
+    }
+}
