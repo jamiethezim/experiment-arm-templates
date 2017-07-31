@@ -15,7 +15,7 @@
             "value": "Ubuntu16.04-LTS"
         },
 	    "sourceImageVhdUri": {
-            "value": "https://dwhangertestlinuxwest.blob.core.windows.net/vhds/xenial-server-cloudimg-amd64-disk1.vhd"
+            "value": "https://dwhangertestlinux.blob.core.windows.net/vhds/xenial-server-cloudimg-amd64-disk1.vhd"
     	},
         "vmSku": {
             "value": "Standard_A1"
