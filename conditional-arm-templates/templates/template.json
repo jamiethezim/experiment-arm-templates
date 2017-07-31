@@ -20,12 +20,6 @@
                 "osType": {
                     "value": "[parameters('osType')]"
                 },
-                "pipName": {
-                    "value": "[parameters('pipName')]"
-                },
-                "pipLabel": {
-                    "value": "[parameters('pipLabel')]"
-                },
                 "location": {
                     "value": "[parameters('location')]"
                 },
@@ -112,10 +106,6 @@
                 "Unmanaged"
             ]
         },
-        "pipName": {
-            "defaultValue": "",
-            "type": "string"
-        },
         "baseUrl": {
             "defaultValue": "https://gallery.azure.com/artifact/20151001/microsoft.vmss.6.0.2/Artifacts",
             "type": "string",
@@ -168,10 +158,6 @@
         },
         "autoscaleMax": {
             "defaultValue": "10",
-            "type": "string"
-        },
-        "pipLabel": {
-            "defaultValue": "",
             "type": "string"
         },
         "password": {
