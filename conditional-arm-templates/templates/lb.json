@@ -52,9 +52,8 @@
           {
             "name": "LoadBalancerFrontEnd",
             "properties": {
-              "publicIPAddress": {
-                "id": "[resourceId('Microsoft.Network/publicIpAddresses', parameters('pipName'))]"
-              }
+              "privateIPAddress": "10.0.2.6",
+              "privateIPAllocationMethod": "Static"
             }
           }
         ],
