@@ -63,7 +63,7 @@
               "subnet": {
                   "id": "[variables('subnetId')]"
               },
-              "privateIPAddress": "10.82.140.6",
+              "privateIPAddress": "10.82.0.126",
               "privateIPAllocationMethod": "Static"
             }
           }
