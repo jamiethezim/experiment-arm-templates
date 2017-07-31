@@ -15,7 +15,7 @@
             "value": "Ubuntu16.04-LTS"
         },
 	    "sourceImageVhdUri": {
-            "value": "https://dwhangertestlinux.blob.core.windows.net/vhds/xenial-server-cloudimg-amd64-disk1.vhd"
+            "value": "https://dwhangernslinux.blob.core.windows.net/vhds/xenial-server-cloudimg-amd64-disk1_2.vhd"
     	},
         "vmSku": {
             "value": "Standard_A1"
@@ -42,7 +42,7 @@
             "value": "eastus"
         },
         "username": {
-            "value": "darren"
+            "value": "jamie"
         },
         "scaleOutInterval": {
             "value": "1"
@@ -60,7 +60,7 @@
             "value": "jzimmerman-pip"
         },
         "password": {
-            "value": "Password1234"
+            "value": "scarySpook123"
         },
         "scaleOutCPUPercentageThreshold": {
             "value": "65"
@@ -69,19 +69,19 @@
             "value": "jzimmerman-vmss"
         },
         "vnetNewOrExisting": {
-            "value": "existing"
+            "value": "new"
         },
         "vnetRGname": {
-            "value": "MUSE1-ND01-N001"
+            "value": "jzimmerman-test-rg"
         },
         "vnetName": {
-            "value": "muse1-nd01-n001-vn01"
+            "value": "jamie-new-vnet-01"
         },
         "subnetName": {
-              "value": "10.82.136.0/25"
+              "value": "10.83.136.0/25"
           },
         "subnetAddressSpaceName": {
-              "value": "10.82.136.0/21"
+              "value": "10.83.136.0/21"
         }
     }
 }
