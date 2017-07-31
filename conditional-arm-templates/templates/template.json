@@ -213,6 +213,13 @@
                 "description": "subnet in cidr format eg: 10.82.140.0/22"
             }
         },
+        "subnetTitle": {
+            "defaultValue": "default",
+            "type": "string",
+            "metadata": {
+                "description": "subnet's identifying name. only specify a different name if specifically creating a subnet name in vnet.json or choosing a subnet in existing vnet"
+            }
+        },
         "subnetAddressSpaceName": {
             "defaultValue": "10.82.0.0/23",
             "type": "string",
@@ -245,6 +252,9 @@
                     },
                     "subnetName": {
                         "value": "[parameters('subnetName')]"
+                    },
+                    "subnetTitle": {
+                        "value": "[parameters('subnetTitle')]"
                     },
                     "subnetAddressSpaceName": {
                         "value": "[parameters('subnetAddressSpaceName')]"

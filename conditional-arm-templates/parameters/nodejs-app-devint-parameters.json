@@ -79,7 +79,10 @@
         },
         "subnetName": {
               "value": "10.83.136.0/25"
-          },
+        },
+        "subnetTitle": {
+            "value": "default"
+        },
         "subnetAddressSpaceName": {
               "value": "10.83.136.0/21"
         }
