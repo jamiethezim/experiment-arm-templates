@@ -42,7 +42,7 @@
             "value": "eastus"
         },
         "username": {
-            "value": "darren"
+            "value": "jamie"
         },
         "scaleOutInterval": {
             "value": "1"
@@ -57,7 +57,7 @@
             "value": "15"
         },
         "pipLabel": {
-            "value": "darren-pip"
+            "value": "jamie-pip"
         },
         "password": {
             "value": "scarySpook123"
@@ -66,22 +66,22 @@
             "value": "65"
         },
         "vmssName": {
-            "value": "darren-vmss"
+            "value": "jzimmerman-vmss"
         },
         "vnetNewOrExisting": {
             "value": "existing"
         },
         "vnetRGname": {
-            "value": "MUSE1-ND01-N001"
+            "value": "jzimmerman-bridge-net"
         },
         "vnetName": {
-            "value": "muse1-nd01-n001-vn01"
+            "value": "jzimmerman-vnet"
         },
         "subnetName": {
               "value": "10.82.140.0/22"
         },
         "subnetTitle": {
-            "value": "DEV-Subnet"
+            "value": "default"
         },
         "subnetAddressSpaceName": {
               "value": "10.82.136.0/21"

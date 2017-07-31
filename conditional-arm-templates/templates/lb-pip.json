@@ -16,15 +16,6 @@
     },
     "osType": {
       "type": "string"
-    },
-    "vnetRGname": {
-      "type": "string"
-    },
-    "vnetName": {
-      "type": "string"
-    },
-    "subnetTitle": {
-      "type": "string"
     }
   },
   "variables": {
@@ -33,9 +24,7 @@
     "natEndPort": 50119,
     "natBackendPortWindows": 3389,
     "natBackendPortLinux": 22,
-    "natBackendPort": "[variables(concat('natBackendPort', parameters('osType')))]",
-    "vnetId": "[resourceId(parameters('vnetRGname'), 'Microsoft.Network/virtualNetworks', parameters('vnetName'))]",
-    "subnetId": "[concat(variables('vnetId'),'/subnets/', parameters('subnetTitle'))]"
+    "natBackendPort": "[variables(concat('natBackendPort', parameters('osType')))]"
   },
   "resources": [
     {
@@ -55,16 +44,17 @@
       "name": "[parameters('lbName')]",
       "location": "[parameters('location')]",
       "apiVersion": "2016-12-01",
+      "dependsOn": [
+        "[parameters('pipName')]"
+      ],
       "properties": {
         "frontendIPConfigurations": [
           {
             "name": "LoadBalancerFrontEnd",
             "properties": {
-              "subnet": {
-                  "id": "[variables('subnetId')]"
-              },
-              "privateIPAddress": "10.82.140.6",
-              "privateIPAllocationMethod": "Static"
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIpAddresses', parameters('pipName'))]"
+              }
             }
           }
         ],

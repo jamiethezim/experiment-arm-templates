@@ -31,6 +31,15 @@
                 },
                 "lbName": {
                     "value": "[concat(parameters('vmssName'), 'Lb')]"
+                },
+                "vnetRGname": {
+                    "value": "[parameters('vnetRGname')]"
+                },
+                "vnetName": {
+                    "value": "[parameters('vnetName')]"
+                },
+                "subnetTitle": {
+                    "value": "[parameters('subnetTitle')]"
                 }
             },
             "templateUri": "[concat(variables('baseTemplateUriDwhanger'), 'lb.json')]"
@@ -279,7 +288,10 @@
                 },
                 "mode": "Incremental",
                 "parameters": "[variables('lbLogic').parameters]"
-            }
+            },
+            "dependsOn": [
+                "vnetDep"
+            ]
         },
         {
             "type": "Microsoft.Resources/deployments",
