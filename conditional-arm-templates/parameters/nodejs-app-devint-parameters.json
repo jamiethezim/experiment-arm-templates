@@ -15,7 +15,7 @@
             "value": "Ubuntu16.04-LTS"
         },
 	    "sourceImageVhdUri": {
-            "value": "https://dwhangernslinux.blob.core.windows.net/vhds/xenial-server-cloudimg-amd64-disk1_2.vhd"
+            "value": "https://dwhangertestlinuxwest.blob.core.windows.net/vhds/xenial-server-cloudimg-amd64-disk1.vhd"
     	},
         "vmSku": {
             "value": "Standard_A1"
@@ -66,19 +66,19 @@
             "value": "existing"
         },
         "vnetRGname": {
-            "value": "jzimmerman-bridge-net"
+            "value": "MUSE1-ND01-N001"
         },
         "vnetName": {
-            "value": "jzimmerman-vnet"
+            "value": "muse1-nd01-n001-vn01"
         },
         "subnetName": {
-              "value": "10.82.0.0/25"
+              "value": "10.82.140.0/22"
         },
         "subnetTitle": {
-            "value": "default"
+            "value": "DEV-Subnet"
         },
         "subnetAddressSpaceName": {
-              "value": "10.82.0.0/23"
+              "value": "10.82.136.0/21"
         }
     }
 }
