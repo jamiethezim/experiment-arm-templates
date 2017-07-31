@@ -15,7 +15,7 @@
             "value": "Ubuntu16.04-LTS"
         },
 	    "sourceImageVhdUri": {
-            "value": "https://dwhangertestlinux.blob.core.windows.net/vhds/xenial-server-cloudimg-amd64-disk1.vhd"
+            "value": "https://dwhangernslinux.blob.core.windows.net/vhds/xenial-server-cloudimg-amd64-disk1_2.vhd"
     	},
         "vmSku": {
             "value": "Standard_A1"
@@ -78,13 +78,13 @@
             "value": "jzimmerman-vnet"
         },
         "subnetName": {
-              "value": "10.82.140.0/22"
+              "value": "10.82.0.0/25"
         },
         "subnetTitle": {
             "value": "default"
         },
         "subnetAddressSpaceName": {
-              "value": "10.82.136.0/21"
+              "value": "10.82.0.0/23"
         }
     }
 }
