@@ -34,6 +34,9 @@
                 },
                 "subnetTitle": {
                     "value": "[parameters('subnetTitle')]"
+                },
+                "privateIP": {
+                    "value": "[parameters('privateIP')]"
                 }
             },
             "templateUri": "[concat(variables('baseTemplateUriDwhanger'), 'lb.json')]"
@@ -213,6 +216,13 @@
             "type": "string",
             "metadata": {
                 "description": "subnet's identifying name. only specify a different name if specifically creating a subnet name in vnet.json or choosing a subnet in existing vnet"
+            }
+        },
+        "privateIP": {
+            "type": "string",
+            "defaultValue": "10.82.143.240",
+            "metadata": {
+                "description": "Load balancer's private IP makes it internal, must belong in subnet"
             }
         },
         "subnetAddressSpaceName": {

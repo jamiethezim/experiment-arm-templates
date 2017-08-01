@@ -79,6 +79,9 @@
         },
         "subnetAddressSpaceName": {
               "value": "10.82.136.0/21"
+        },
+        "privateIP": {
+            "value": "10.82.143.240"
         }
     }
 }

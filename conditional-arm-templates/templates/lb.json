@@ -19,6 +19,9 @@
     },
     "subnetTitle": {
       "type": "string"
+    },
+    "privateIP": {
+      "type": "string"
     }
   },
   "variables": {
@@ -45,7 +48,7 @@
               "subnet": {
                   "id": "[variables('subnetId')]"
               },
-              "privateIPAddress": "10.82.143.240",
+              "privateIPAddress": "[parameters('privateIP')]",
               "privateIPAllocationMethod": "Static"
             }
           }
