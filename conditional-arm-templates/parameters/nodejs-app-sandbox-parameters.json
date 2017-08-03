@@ -79,6 +79,12 @@
         },
         "subnetAddressSpaceName": {
               "value": "10.82.0.0/23"
+        },
+        "pipName": {
+            "value": "ip01"
+        },
+        "pipLabel": {
+            "value": "jamie-pip"
         }
     }
 }
