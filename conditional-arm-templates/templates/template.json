@@ -35,8 +35,11 @@
                 "subnetTitle": {
                     "value": "[parameters('subnetTitle')]"
                 },
-                "privateIP": {
-                    "value": "[parameters('privateIP')]"
+                "pipName": {
+                    "value": "[parameters('pipName')"
+                },
+                "pipLabel": {
+                    "value": "[parameters('pipName')"
                 }
             },
             "templateUri": "[concat(variables('baseTemplateUriDwhanger'), 'lb.json')]"
@@ -218,12 +221,13 @@
                 "description": "subnet's identifying name. only specify a different name if specifically creating a subnet name in vnet.json or choosing a subnet in existing vnet"
             }
         },
-        "privateIP": {
+        "pipName": {
+            "defaultValue": "ip01",
+            "type": "string"
+        },
+        "pipLabel": {
             "type": "string",
-            "defaultValue": "10.82.143.240",
-            "metadata": {
-                "description": "Load balancer's private IP makes it internal, must belong in subnet"
-            }
+            "defaultValue": "jamie-pip"
         },
         "subnetAddressSpaceName": {
             "defaultValue": "10.82.0.0/23",
