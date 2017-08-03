@@ -30,7 +30,7 @@
                     "value": "[parameters('pipName')"
                 },
                 "pipLabel": {
-                    "value": "[parameters('pipName')"
+                    "value": "[parameters('pipLabel')"
                 }
             },
             "templateUri": "[concat(variables('baseTemplateUriDwhanger'), 'lb.json')]"
