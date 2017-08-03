@@ -5,22 +5,16 @@
     "location": {
       "type": "string"
     },
+    "pipName": {
+      "type": "string"
+    },
+    "pipLabel": {
+      "type": "string"
+    },
     "lbName": {
       "type": "string"
     },
     "osType": {
-      "type": "string"
-    },
-    "vnetRGname": {
-      "type": "string"
-    },
-    "vnetName": {
-      "type": "string"
-    },
-    "subnetTitle": {
-      "type": "string"
-    },
-    "privateIP": {
       "type": "string"
     }
   },
@@ -30,26 +24,37 @@
     "natEndPort": 50119,
     "natBackendPortWindows": 3389,
     "natBackendPortLinux": 22,
-    "natBackendPort": "[variables(concat('natBackendPort', parameters('osType')))]",
-    "vnetId": "[resourceId(parameters('vnetRGname'), 'Microsoft.Network/virtualNetworks', parameters('vnetName'))]",
-    "subnetId": "[concat(variables('vnetId'),'/subnets/', parameters('subnetTitle'))]"
+    "natBackendPort": "[variables(concat('natBackendPort', parameters('osType')))]"
   },
   "resources": [
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "[parameters('pipName')]",
+      "location": "[parameters('location')]",
+      "apiVersion": "2016-12-01",
+      "properties": {
+        "publicIPAllocationMethod": "Dynamic",
+        "dnsSettings": {
+          "domainNameLabel": "[parameters('pipLabel')]"
+        }
+      }
+    },
     {
       "type": "Microsoft.Network/loadBalancers",
       "name": "[parameters('lbName')]",
       "location": "[parameters('location')]",
       "apiVersion": "2016-12-01",
+      "dependsOn": [
+        "[parameters('pipName')]"
+      ],
       "properties": {
         "frontendIPConfigurations": [
           {
             "name": "LoadBalancerFrontEnd",
             "properties": {
-              "subnet": {
-                  "id": "[variables('subnetId')]"
-              },
-              "privateIPAddress": "[parameters('privateIP')]",
-              "privateIPAllocationMethod": "Static"
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIpAddresses', parameters('pipName'))]"
+              }
             }
           }
         ],
