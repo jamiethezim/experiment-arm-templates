@@ -26,15 +26,6 @@
                 "lbName": {
                     "value": "[concat(parameters('vmssName'), 'Lb')]"
                 },
-                "vnetRGname": {
-                    "value": "[parameters('vnetRGname')]"
-                },
-                "vnetName": {
-                    "value": "[parameters('vnetName')]"
-                },
-                "subnetTitle": {
-                    "value": "[parameters('subnetTitle')]"
-                },
                 "pipName": {
                     "value": "[parameters('pipName')"
                 },
