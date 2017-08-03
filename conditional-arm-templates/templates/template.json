@@ -27,7 +27,7 @@
                     "value": "[concat(parameters('vmssName'), 'Lb')]"
                 },
                 "pipName": {
-                    "value": "[parameters('pipName')"
+                    "value": "[parameters('pipName')]"
                 },
                 "pipLabel": {
                     "value": "[parameters('pipLabel')"
