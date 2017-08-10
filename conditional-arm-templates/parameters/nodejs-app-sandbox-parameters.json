@@ -48,7 +48,7 @@
             "value": "4"
         },
         "autoscaleMin": {
-            "value": "2"
+            "value": "1"
         },
         "autoscaleMax": {
             "value": "15"
