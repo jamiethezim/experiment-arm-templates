@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "autoscaleDefault": {
-            "value": "2"
+            "value": "1"
         },
         "scaleInCPUPercentageThreshold": {
-            "value": "35"
+            "value": "10000000"
         },
         "authenticationType": {
             "value": "password"
@@ -57,7 +57,7 @@
             "value": "scarySpook123"
         },
         "scaleOutCPUPercentageThreshold": {
-            "value": "65"
+            "value": "25000000"
         },
         "vmssName": {
             "value": "jzimmerman-vmss"

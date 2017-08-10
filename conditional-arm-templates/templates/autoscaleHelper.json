@@ -64,7 +64,7 @@
             "rules": [
               {
                 "metricTrigger": {
-                  "metricName": "Percentage CPU",
+                  "metricName": "Network In",
                   "metricNamespace": "",
                   "metricResourceUri": "[parameters('vmssId')]",
                   "timeGrain": "PT1M",
@@ -83,7 +83,7 @@
               },
               {
                 "metricTrigger": {
-                  "metricName": "Percentage CPU",
+                  "metricName": "Network In",
                   "metricNamespace": "",
                   "metricResourceUri": "[parameters('vmssId')]",
                   "timeGrain": "PT1M",
