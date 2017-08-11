@@ -22,7 +22,7 @@
       "type": "string",
       "defaultValue": "1"
     },
-    "scaleOutCPUPercentageThreshold": {
+    "scaleOutNetworkInThreshold": {
       "type": "string",
       "defaultValue": "75"
     },
@@ -30,7 +30,7 @@
       "type": "string",
       "defaultValue": "1"
     },
-    "scaleInCPUPercentageThreshold": {
+    "scaleInNetworkInThreshold": {
       "type": "string",
       "defaultValue": "25"
     },
@@ -72,7 +72,7 @@
                   "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "GreaterThan",
-                  "threshold": "[parameters('scaleOutCPUPercentageThreshold')]"
+                  "threshold": "[parameters('scaleOutNetworkInThreshold')]"
                 },
                 "scaleAction": {
                   "direction": "Increase",
@@ -91,7 +91,7 @@
                   "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "LessThan",
-                  "threshold": "[parameters('scaleInCPUPercentageThreshold')]"
+                  "threshold": "[parameters('scaleInNetworkInThreshold')]"
                 },
                 "scaleAction": {
                   "direction": "Decrease",

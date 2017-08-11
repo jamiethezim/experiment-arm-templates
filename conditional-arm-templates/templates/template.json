@@ -61,7 +61,7 @@
             "defaultValue": "1",
             "type": "string"
         },
-        "scaleInCPUPercentageThreshold": {
+        "scaleInNetworkInThreshold": {
             "defaultValue": "25",
             "type": "string"
         },
@@ -161,7 +161,7 @@
             "defaultValue": "",
             "type": "securestring"
         },
-        "scaleOutCPUPercentageThreshold": {
+        "scaleOutNetworkInThreshold": {
             "defaultValue": "75",
             "type": "string"
         },
@@ -382,10 +382,10 @@
                         "value": "[parameters('scaleOutInterval')]"
                     },
                     "scaleOutCPUPercentageThreshold": {
-                        "value": "[parameters('scaleOutCPUPercentageThreshold')]"
+                        "value": "[parameters('scaleOutNetworkInThreshold')]"
                     },
                     "scaleInCPUPercentageThreshold": {
-                        "value": "[parameters('scaleInCPUPercentageThreshold')]"
+                        "value": "[parameters('scaleInNetworkInThreshold')]"
                     },
                     "autoscaleMax": {
                         "value": "[parameters('autoscaleMax')]"

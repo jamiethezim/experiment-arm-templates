@@ -14,13 +14,13 @@
     "autoscaleDefault": {
       "type": "string"
     },
-    "scaleOutCPUPercentageThreshold": {
+    "scaleOutNetworkInThreshold": {
       "type": "string"
     },
     "scaleOutInterval": {
       "type": "string"
     },
-    "scaleInCPUPercentageThreshold": {
+    "scaleInNetworkInThreshold": {
       "type": "string"
     },
     "scaleInInterval": {
@@ -46,14 +46,14 @@
         "autoscaleDefault": {
           "value": "[parameters('autoscaleDefault')]"
         },
-        "scaleOutCPUPercentageThreshold": {
-          "value": "[parameters('scaleOutCPUPercentageThreshold')]"
+        "scaleOutNetworkInThreshold": {
+          "value": "[parameters('scaleOutNetworkInThreshold')]"
         },
         "scaleOutInterval": {
           "value": "[parameters('scaleOutInterval')]"
         },
-        "scaleInCPUPercentageThreshold": {
-          "value": "[parameters('scaleInCPUPercentageThreshold')]"
+        "scaleInNetworkInThreshold": {
+          "value": "[parameters('scaleInNetworkInThreshold')]"
         },
         "scaleInInterval": {
           "value": "[parameters('scaleInInterval')]"
