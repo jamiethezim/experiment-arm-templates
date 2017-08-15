@@ -68,9 +68,9 @@
                   "metricNamespace": "",
                   "metricResourceUri": "[parameters('vmssId')]",
                   "timeGrain": "PT1M",
-                  "statistic": "Average",
+                  "statistic": "Total",
                   "timeWindow": "PT5M",
-                  "timeAggregation": "Average",
+                  "timeAggregation": "Total",
                   "operator": "GreaterThan",
                   "threshold": "[parameters('scaleOutNetworkInThreshold')]"
                 },
@@ -87,9 +87,9 @@
                   "metricNamespace": "",
                   "metricResourceUri": "[parameters('vmssId')]",
                   "timeGrain": "PT1M",
-                  "statistic": "Average",
+                  "statistic": "Total",
                   "timeWindow": "PT5M",
-                  "timeAggregation": "Average",
+                  "timeAggregation": "Total",
                   "operator": "LessThan",
                   "threshold": "[parameters('scaleInNetworkInThreshold')]"
                 },
