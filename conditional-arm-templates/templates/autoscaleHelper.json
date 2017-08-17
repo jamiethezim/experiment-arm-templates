@@ -47,10 +47,10 @@
     {
       "type": "Microsoft.Insights/autoscaleSettings",
       "apiVersion": "2015-04-01",
-      "name": "cpuautoscale",
+      "name": "networkautoscale",
       "location": "eastus",
       "properties": {
-        "name": "cpuautoscale",
+        "name": "networkautoscale",
         "targetResourceUri": "[parameters('vmssId')]",
         "enabled": true,
         "profiles": [

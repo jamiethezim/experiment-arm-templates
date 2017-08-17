@@ -62,7 +62,7 @@
             "type": "string"
         },
         "scaleInNetworkInThreshold": {
-            "defaultValue": "25",
+            "defaultValue": "1000000000",
             "type": "string"
         },
         "authenticationType": {
@@ -162,7 +162,7 @@
             "type": "securestring"
         },
         "scaleOutNetworkInThreshold": {
-            "defaultValue": "75",
+            "defaultValue": "10000000",
             "type": "string"
         },
         "vmssName": {
@@ -381,10 +381,10 @@
                     "scaleOutInterval": {
                         "value": "[parameters('scaleOutInterval')]"
                     },
-                    "scaleOutCPUPercentageThreshold": {
+                    "scaleOutNetworkInThreshold": {
                         "value": "[parameters('scaleOutNetworkInThreshold')]"
                     },
-                    "scaleInCPUPercentageThreshold": {
+                    "scaleInNetworkInThreshold": {
                         "value": "[parameters('scaleInNetworkInThreshold')]"
                     },
                     "autoscaleMax": {
