@@ -5,7 +5,7 @@
         "vmssTemplateUri": "[concat(variables('baseTemplateUriDwhanger'), 'vmss.json')]",
         "lbLogic": "[variables(concat('lbLogic', parameters('singlePlacementGroup')))]",
         "diskTypeIfSinglePlacementGrouptrue": "[parameters('diskTypeIfSmall')]",
-        "autoscaleTemplateUri": "[concat(variables('baseTemplateUri'), 'autoscale.json')]",
+        "autoscaleTemplateUri": "[concat(variables('baseTemplateUriDwhanger'), 'autoscale.json')]",
         "lbLogicfalse": {
             "parameters": {},
             "templateUri": "[concat(variables('baseTemplateUri'), 'null.json')]"
@@ -126,7 +126,7 @@
             ]
         },
         "autoscaleYesOrNo": {
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "type": "string",
             "allowedValues": [
                 "Yes",
