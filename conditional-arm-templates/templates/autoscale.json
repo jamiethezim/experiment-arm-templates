@@ -31,11 +31,15 @@
     },
     "baseTemplateUri": {
       "type": "string"
+    },
+    "baseTemplateUriDwhanger": {
+      "type": "string"
     }
+    
   },
   "variables": {
     "autoscaleLogicIfYes": {
-      "templateUri": "[concat(parameters('baseTemplateUri'), 'autoscaleHelper.json')]",
+      "templateUri": "[concat(parameters('baseTemplateUriDwhanger'), 'autoscaleHelper.json')]",
       "parameters": {
         "autoscaleMin": {
           "value": "[parameters('autoscaleMin')]"
@@ -71,7 +75,7 @@
   },
   "resources": [
     {
-      "name": "autoscaleDep",
+      "name": "autoscalehelpDep",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-11-01",
       "properties": {

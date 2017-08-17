@@ -396,6 +396,9 @@
                     "baseTemplateUri": {
                         "value": "[variables('baseTemplateUri')]"
                     },
+                    "baseTemplateUriDwhanger": {
+                        "value": "[variables('baseTemplateUriDwhanger')]"
+                    },
                     "autoscaleYesOrNo": {
                         "value": "[parameters('autoscaleYesOrNo')]"
                     },
