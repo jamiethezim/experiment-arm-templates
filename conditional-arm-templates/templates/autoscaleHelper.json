@@ -32,7 +32,7 @@
     },
     "scaleInNetworkInThreshold": {
       "type": "string",
-      "defaultValue": "10000000"
+      "defaultValue": "500000000"
     },
     "scaleInInterval": {
       "type": "string",

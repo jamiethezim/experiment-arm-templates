@@ -62,7 +62,7 @@
             "type": "string"
         },
         "scaleInNetworkInThreshold": {
-            "defaultValue": "1000000000",
+            "defaultValue": "500000000",
             "type": "string"
         },
         "authenticationType": {
@@ -162,7 +162,7 @@
             "type": "securestring"
         },
         "scaleOutNetworkInThreshold": {
-            "defaultValue": "10000000",
+            "defaultValue": "1000000000",
             "type": "string"
         },
         "vmssName": {
