@@ -70,7 +70,7 @@
                   "timeGrain": "PT1M",
                   "statistic": "Sum",
                   "timeWindow": "PT5M",
-                  "timeAggregation": "Total",
+                  "timeAggregation": "Average",
                   "operator": "GreaterThan",
                   "threshold": "[parameters('scaleOutNetworkInThreshold')]"
                 },
@@ -89,7 +89,7 @@
                   "timeGrain": "PT1M",
                   "statistic": "Sum",
                   "timeWindow": "PT5M",
-                  "timeAggregation": "Total",
+                  "timeAggregation": "Average",
                   "operator": "LessThan",
                   "threshold": "[parameters('scaleInNetworkInThreshold')]"
                 },
