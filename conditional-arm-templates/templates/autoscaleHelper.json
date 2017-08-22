@@ -24,7 +24,7 @@
     },
     "scaleOutNetworkInThreshold": {
       "type": "string",
-      "defaultValue": "1000000000"
+      "defaultValue": "800000"
     },
     "scaleOutInterval": {
       "type": "string",
@@ -32,7 +32,7 @@
     },
     "scaleInNetworkInThreshold": {
       "type": "string",
-      "defaultValue": "500000000"
+      "defaultValue": "400000"
     },
     "scaleInInterval": {
       "type": "string",
@@ -68,7 +68,7 @@
                   "metricNamespace": "",
                   "metricResourceUri": "[parameters('vmssId')]",
                   "timeGrain": "PT1M",
-                  "statistic": "Sum",
+                  "statistic": "Average",
                   "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "GreaterThan",
@@ -87,7 +87,7 @@
                   "metricNamespace": "",
                   "metricResourceUri": "[parameters('vmssId')]",
                   "timeGrain": "PT1M",
-                  "statistic": "Sum",
+                  "statistic": "Average",
                   "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "LessThan",
