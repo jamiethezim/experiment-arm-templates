@@ -78,7 +78,7 @@
                   "direction": "Increase",
                   "type": "ChangeCount",
                   "value": "[parameters('scaleOutInterval')]",
-                  "cooldown": "PT1M"
+                  "cooldown": "PT3M"
                 }
               },
               {
