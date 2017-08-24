@@ -6,7 +6,7 @@
             "value": "1"
         },
         "scaleInNetworkInThreshold": {
-            "value": "10000000"
+            "value": "400000000"
         },
         "authenticationType": {
             "value": "password"
@@ -57,7 +57,7 @@
             "value": "scarySpook123"
         },
         "scaleOutNetworkInThreshold": {
-            "value": "1000000000"
+            "value": "500000000"
         },
         "vmssName": {
             "value": "jzimmerman-vmss"
